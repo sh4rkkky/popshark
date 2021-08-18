@@ -13,7 +13,13 @@
       src: ['audio/ngumv2.ogg', 'audio/ngumv2.mp3']
     });
 
-    let manut = new Howl({ src: ['audio/manut.mp3'] })
+    let manut = [
+        new Howl({ src: ['audio/manut.mp3'] }),
+        new Howl({ src: ['audio/hmahroi.mp3'] }),
+        new Howl({ src: ['audio/ngumngum.mp3'] }),
+        new Howl({ src: ['audio/sodyod.mp3'] }),
+        new Howl({ src: ['audio/welcome.mp3'] }),
+    ]
     
     function countUwU() {
         if (antiPress) {
@@ -22,10 +28,15 @@
         antiPress = true
         count.update((v) => v + 1 )
         // countuwu++
-        ngum.play()
         if ($count % 100 === 0) {
-            manut.play()
+            const randIndex = ~~(Math.random() * manut.length)
+            manut[randIndex].play()
+        } else {
+            ngum.play()
         }
+        // if ($count % 100 === 0) {
+        //     manut.play()
+        // }
         indexImage = (indexImage + 1) % imageurls.length;
     }
 
@@ -40,7 +51,6 @@
     <meta name="title" content="POPSHARK"/>
     <meta name="description" content="POPSHARK"/>
     <meta name="keywords" content="popshark, ป็อปชาร์ค, ป็อปฉลาม, กดฉลาม">
-
 
     <style> 
         * {
@@ -60,6 +70,7 @@
  class="w-full h-screen flex flex-col items-center justify bg-transparent" 
  on:mousedown={countUwU} on:mouseup={antiPressUwU}
  >
+
     {#each imageurls as url, indexuwu}
         <img
             src={url}
