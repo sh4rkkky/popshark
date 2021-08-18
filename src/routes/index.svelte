@@ -13,7 +13,7 @@
       src: ['audio/ngumv2.ogg', 'audio/ngumv2.mp3']
     });
 
-    let manut = new Howl({ src: ['audio/manut.ogg'] })
+    let manut = new Howl({ src: ['audio/manut.mp3'] })
     
     function countUwU() {
         if (antiPress) {
