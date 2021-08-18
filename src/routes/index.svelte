@@ -12,6 +12,8 @@
     let ngum = new Howl({
       src: ['audio/ngumv2.ogg', 'audio/ngumv2.mp3']
     });
+
+    let manut = new Howl({ src: ['audio/manut.ogg'] })
     
     function countUwU() {
         if (antiPress) {
@@ -21,6 +23,9 @@
         count.update((v) => v + 1 )
         // countuwu++
         ngum.play()
+        if ($count % 100 === 0) {
+            manut.play()
+        }
         indexImage = (indexImage + 1) % imageurls.length;
     }
 
