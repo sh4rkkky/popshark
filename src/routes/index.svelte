@@ -22,8 +22,9 @@
     ]
     
     function countUwU() {
-        antiPress = true
-        if (antiPress) {
+        if (antiPress == false) {
+			antiPress = true
+
             count.update((v) => v + 1 )
             if ($count % 100 === 0) {
                 const randIndex = ~~(Math.random() * manut.length)
