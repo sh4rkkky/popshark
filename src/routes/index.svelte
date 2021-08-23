@@ -22,9 +22,6 @@
     ]
     
     function countUwU() {
-        if (antiPress) {
-            return
-        }
         antiPress = true
         count.update((v) => v + 1 )
         // countuwu++
@@ -42,7 +39,6 @@
 
     function antiPressUwU() {
         antiPress = false
-        console.log("งั้ม")
     }
 </script>
 
