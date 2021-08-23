@@ -23,18 +23,16 @@
     
     function countUwU() {
         antiPress = true
-        count.update((v) => v + 1 )
-        // countuwu++
-        if ($count % 100 === 0) {
-            const randIndex = ~~(Math.random() * manut.length)
-            manut[randIndex].play()
-        } else {
-            ngum.play()
+        if (antiPress) {
+            count.update((v) => v + 1 )
+            if ($count % 100 === 0) {
+                const randIndex = ~~(Math.random() * manut.length)
+                manut[randIndex].play()
+            } else {
+                ngum.play()
+            }
+            indexImage = (indexImage + 1) % imageurls.length;
         }
-        // if ($count % 100 === 0) {
-        //     manut.play()
-        // }
-        indexImage = (indexImage + 1) % imageurls.length;
     }
 
     function antiPressUwU() {
