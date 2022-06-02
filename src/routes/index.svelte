@@ -82,6 +82,6 @@
         Count: {$count.toLocaleString()}
     </p>
     <dev class="text-1xl border-black text-white rounded p-1 flex bg-black mt-1">
-        <p class="text-white underline">รักเธออออมั่กๆเลยยยยยยยยยยย</p>
+        <p class="text-white underline">ชาร์คกี้สุดหล่อ</p>
     </dev>
 </main>
